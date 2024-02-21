@@ -7,6 +7,10 @@ Domain_d::SetDimension(const int &nc, const int &cc, const int &fc){
   m_face_count = fc;
   
   //// CELL ALLOCATION
+  cudaMalloc((void **)&x,               m_cell_count * sizeof (double3)); // PIOLA  KIRCHOFF
+  cudaMalloc((void **)&v,               m_cell_count * sizeof (double3)); // PIOLA  KIRCHOFF
+  cudaMalloc((void **)&a,               m_cell_count * sizeof (double3)); // PIOLA  KIRCHOFF
+  
   cudaMalloc((void **)&c_PK,            m_cell_count * 6 * sizeof (double)); // PIOLA  KIRCHOFF
   cudaMalloc((void **)&m_c_face_count,  m_cell_count * sizeof (unsigned int)); // PIOLA  KIRCHOFF
   cudaMalloc((void **)&m_c_face,        m_cell_count * 4 * sizeof (unsigned int)); // PIOLA  KIRCHOFF
@@ -95,7 +99,7 @@ void Domain_d::AddBoxLength(double3 const & V, double3 const & L, const double &
 
     //cout <<"m_node size"<<m_node.size()<<endl;
     } 
-		cudaMemcpy(this->x, x_H, sizeof(double3) * m_node_count, cudaMemcpyHostToDevice);    
+		cudaMemcpy(this->x, x_H, sizeof(double3) * m_cell_count, cudaMemcpyHostToDevice);    
 
     // !! ALLOCATE ELEMENTS
     // !! DIMENSION = 2

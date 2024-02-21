@@ -1,0 +1,13 @@
+https://github.com/adamdempsey90/fvm/
+
+Parallel reduction
+https://shreeraman-ak.medium.com/parallel-reduction-with-cuda-d0ae10c1ae2c#:~:text=Note%3A%20This%20post%20is%20intended,single%20value%20as%20a%20result
+With code
+https://github.com/shreeraman96/cuda_samples/blob/main/reduction_tree.cu
+
+Reduction in Dempsey code
+https://github.com/adamdempsey90/fvm/blob/master/fvm_cuda/src/reduce.cu
+
+
+Theory of reduction
+https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf

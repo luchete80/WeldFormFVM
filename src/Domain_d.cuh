@@ -27,13 +27,13 @@ class Domain_d{
   /// USED FOR REDUCTION ////  
   double          *m_c_flux;
   
-  double3         *x, *v, *a;
+  double         *x, *v, *a;
   
   ///// END CELL VARS & FUNCTIONS /////////////////
   
   ///////////////////////// FACE VARIABLES ///////////////////////////
-	double3       *m_vec_pn;											//Vector between baricenters
-	double3       *m_e_pn;											  //Vector normalizado entre baricentros
+	double       *m_vec_pn;	 //Vector										//Vector between baricenters
+	double3      *m_e_pn;											  //Vector normalizado entre baricentros
 	double        *m_dist_pn;										  //Distancia entre baricentros, antes se llamaba l
   unsigned int  *m_f_cell;                      //WHICH AN OFFSET OF CELL FACES
 	double        *dist_pncorr;                                 //Orthogonal correction.

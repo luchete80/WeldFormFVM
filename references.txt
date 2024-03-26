@@ -11,3 +11,9 @@ https://github.com/adamdempsey90/fvm/blob/master/fvm_cuda/src/reduce.cu
 
 Theory of reduction
 https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf
+
+An upwind cell centred Finite Volume Method
+for large strain explicit solid dynamics
+in OpenFOAM
+
+Jibrah Haider 
